@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>rpe4UsingMethod</title>
+    <style>
+        
+        .button1{
+            width: 169px;
+            height: 35px;
+            background-color: lightgreen;
+            border-radius: 18px;
+            border:none;
+            font-size: 20px;
+            
+        }
+        .button2{
+            
+            width: 169px;
+            height: 35px;
+            border-radius: 18px;
+            border:3px solid black;
+            font-size: 15px;
+        }
+        h2{
+            font-size: x-large;
+            margin-left: 15px;
+        }
+        
+    </style>
+</head>
+    <button class="button1" onclick="AddToBag();">Add to bag</button>
+    <button class="button2" onclick="AddToWishlist();">Add to Wishlist</button>
+    <button class="button1" onclick="AddToSale();">Add to sale item</button>
+    <h2 id="cart-summary">Your Bag has 0 items</h2>
+<body>
+    <script>
+        let cartQuantity = 0;
+        
+        function updateCart(){
+            document.querySelector('#cart-summary').innerText = (`your Bag has ${cartQuantity} items`);
+        }
+        function AddToBag(){
+            cartQuantity++;
+            updateCart();
+        }
+        function AddToWishlist(){
+            cartQuantity--;
+            updateCart();
+        }
+        function AddToSale(){
+            cartQuantity+=2;
+            updateCart();
+        }
+    </script>
+</body>
+</html>

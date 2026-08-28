@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>pe5</title>
+</head>
+<body>
+    <h2 id="displayName">Your Name is ?</h2>
+    <h2 id="displayBag">Your Bag Price is ?</h2>
+    <h2 id="displayGST">Your GSTBothBags is ?</h2>
+    <h2 id="displayEvalMethod">Eval Method</h2>
+    <script>
+        // question 1
+        let name = 'Devendra Singh';
+        // question 2
+        name = document.querySelector('#displayName').innerText=(`Your Name is ${name}`);
+        //question 3
+        let bagCost = 2899-(2899*66/100);
+        let finalCostOfMyntraBag = bagCost.toFixed(3);
+        finalCostOfMyntraBag = document.querySelector('#displayBag').innerText=(`Your finalCostOfMyntraBag is ${finalCostOfMyntraBag}`);
+        //question 4
+        console.log(finalCostOfMyntraBag);
+        //question 5
+        let gst = 18/100;
+        let bag1gst =bagCost*gst;
+        let bag2gst =bagCost*gst;
+        let bagCharges = bag1gst+bag2gst;
+        let GSTBothBags = bagCharges.toFixed(3);
+        GSTBothBags = document.querySelector('#displayGST').innerText=(`Your GSTBothBags is ${GSTBothBags}`);
+
+        //question 6
+        result=document.querySelector('#displayEvalMethod').innerText=(eval('4+9'));
+    </script>
+</body>
+</html>

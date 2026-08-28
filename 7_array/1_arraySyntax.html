@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        let numbers = [1,4,3,7,5,6,2];
+        console.log(numbers);
+        console.log(numbers[0]);
+        
+        
+
+        let arr2 = [2,true,null,'dev'];
+        console.log(arr2[3]);
+        console.log(typeof arr2);
+
+        let obj = {}
+
+        console.log(Array.isArray(arr2));
+        console.log(Array.isArray(obj));
+
+        let arr3 = [1,4,3,7,5,6,2];
+        console.log(arr3);
+        console.log(numbers.length); //find length of arr
+        arr3.push(6);       // add element last that you want
+        console.log(arr3);
+        arr3.pop();         //pop remove last element
+        console.log(arr3);
+
+        arr3.splice(1,2);   // delete index to how many delete
+        console.log(arr3); 
+
+        
+        console.log(arr3.toString());   // convert into string
+
+        arr3.sort();                // sort the array
+        console.log(arr3);
+
+        console.log(arr3.valueOf()); // get array it self
+
+        let arr4 = arr3;
+        arr4[0]=99;
+        console.log(arr3);
+        console.log(arr4);
+
+        //destructing 
+        let [a,b,c,d] = arr3;
+        console.log(a+" "+b+" "+c+" "+d );
+    </script>
+</body>
+</html>

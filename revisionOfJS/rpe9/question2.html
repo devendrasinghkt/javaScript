@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- <meta charset="UTF-8">
+    <meta name="viewport" content="width=\, initial-scale=1.0"> -->
+    <title>name</title>
+</head>
+<body>
+   <h1 class="heading"></h1>
+    <script>
+        
+        let heading = document.querySelector('.heading');
+        function greeting(name = " "){
+        let date = new Date();
+        let hours = date.getHours();
+            if(hours>12 && hours <=18) {
+                heading.innerText = ('Good afternoon '+ name);
+            }
+            else if(hours > 18 && hours <=21 ){
+                heading.innerText = ('Good evening '+ name);
+                }
+            else if(hours>21 && hours <=24){
+                heading.innerText = ('Good night '+ name);
+            }
+            else if(hours>1 && hours <=12){
+                heading.innerText = ('Good night '+ name);
+            }
+            else {
+                heading.innerText = ('Improprite msg');
+            }
+        };
+        let name = 'Devendra Singh';
+        greeting(name);
+    </script>
+</body>
+</html>

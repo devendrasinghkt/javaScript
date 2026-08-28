@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>if alternatives</title>
+</head>
+<body>
+    <script>
+        //ternary operator
+        //  let age = 31;
+        //  let result ;
+        //  if(age>18){
+        //     result = 'Adult';
+        //  }
+        //  else{
+        //     result = 'Kid'
+        //  }
+        // console.log(result);
+        //aternate way
+        // let result = age > 18?'Adult' : 'kid'; 
+
+
+        //Guard operator 
+        // Note :- Guard operator check first left falsy value after execute ;
+        //         In guard operator 0 is falsy value ;
+        // let age ;        // if i am not write age guard operator automatically manage this.
+        // let finalAge = age || 18;
+        // console.log(age);
+        // console.log(finalAge);  
+      
+
+        //default operator
+        // Note :- In default operator 0, null, etc  is consider truty value;
+        let age=0;
+        let finalAge = age ?? 18;
+        console.log(age);
+        console.log(finalAge);
+
+    </script>
+</body>
+</html>

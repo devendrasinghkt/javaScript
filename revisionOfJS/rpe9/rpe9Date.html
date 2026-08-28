@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>date</title>
+</head>
+<body>
+    <h2 class="displayGreeting"></h2>
+    <script>
+        let date = new Date();
+        let hours = date.getHours();
+        greeting(hours);
+        function greeting(hours){
+        if(hours>12 && hours <=18) {
+            document.querySelector('.displayGreeting').innerText = ('Good afternoon');
+            }
+        else if(hours > 18 && hours <=21 ){
+            document.querySelector('.displayGreeting').innerText = ('Good evening');
+            }
+        else if(hours>21 && hours <=24){
+            document.querySelector('.displayGreeting').innerText = ('Good night');
+        }
+        else if(hours>1 && hours <=12){
+            document.querySelector('.displayGreeting').innerText = ('Good night');
+        }
+        else {
+            document.querySelector('.displayGreeting').innerText = ('Improprite msg');
+        }
+        }
+        
+
+    </script>
+</body>
+</html>

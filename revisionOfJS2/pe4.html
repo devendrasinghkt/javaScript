@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>pe4</title>
+    <style>
+        #AddToBag{
+            background-color: rgb(173, 243, 173);
+            padding:12px 12px 12px 12px ;
+            border-radius: 7px;
+            border: none;
+        }
+        #AddToWishlist{
+            background-color: rgb(186, 175, 175);
+            padding:12px 12px 12px 12px ;
+            border-radius: 7px;
+            border: none;
+        }
+        #addToSaleItems{
+            color: rebeccapurple;
+            background-color: rgb(192, 40, 114);
+            padding:12px 12px 12px 12px ;
+            border-radius: 7px;
+            border: none;
+        }
+
+    </style>
+</head>
+<body>
+    <button id="AddToBag" onclick="cartNo++;document.querySelector('.displayItems').innerText=(`Your Bag has ${cartNo} items`);">Add to Bag</button>
+    <button id="AddToWishlist" onclick="cartNo--;document.querySelector('.displayItems').innerText=(`Your Bag has ${cartNo} items`);">❤️ Add to Wishlist</button>
+    <button id="addToSaleItems" onclick="cartNo+=2; document.querySelector('.displayItems').innerText=(`Your Bag has ${cartNo} items`)">Add to Sale items</button>
+    <h2 class="displayItems">Your Bag has 0 items</h2>
+    <script>
+        let cartNo = 0;
+    </script>
+</body>
+</html>

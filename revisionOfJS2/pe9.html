@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>pe9</title>
+    <style>
+        .even-js{
+            background-color: blue;
+        }
+        .odd-js{
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+    <h2 class="displayGreeting"></h2>
+    <h2 id="display"></h2> 
+    <h2>
+        <button id="display-button" onclick="onpressed();">0</button>
+        
+    </h2>
+    <script>
+        // console.log('Question 1') //question 1
+        // let date = new Date();
+        // let hours = date.getHours();
+        // if(hours>12 && hours <=18) {
+        //     document.querySelector('.displayGreeting').innerText = ('Good afternoon');
+        //     }
+        // else if(hours > 18 && hours <=21 ){
+        //     document.querySelector('.displayGreeting').innerText = ('Good evening');
+        //     }
+        // else if(hours>21 && hours <=24){
+        //     document.querySelector('.displayGreeting').innerText = ('Good night');
+        // }
+        // else if(hours>1 && hours <=12){
+        //     document.querySelector('.displayGreeting').innerText = ('Good night');
+        // }
+        // else {
+        //     document.querySelector('.displayGreeting').innerText = ('Improprite msg');
+        // }
+        
+        // console.log('Qustion 2'); //question 2
+        // function greeting(name = 'Dear'){
+        //     let date = new Date();
+        //     let hours = date.getHours();
+            
+        //     if(hours>=12 && hours<=18){
+        //         return 'good afternoon'+name;
+        //     }
+        //     else if (hours>18 && hours <=21){
+        //         return 'good evenning'+name;
+        //     }
+        //     else if(hours>21){
+        //         return 'good night'+name;
+        //     }
+        //     else if(hours >=0 && hours <12){
+        //         return 'good morning'+name;
+        //     }
+        //     else {
+        //         return 'impropriate msg'+ name;
+        //     }
+        // }
+        // let result = greeting(' Devendra Singh');
+        // console.log(result);
+        // document.querySelector('#display').innerText= (result);
+
+
+
+
+
+
+//  console.log('Qustion 3'); //question 3
+//         let num = 0;
+//         function onpressed(){
+            
+//            let button =  document.querySelector('.display-button'); 
+//             if(num%2==0){
+//                 button.classList.remove('odd-js');
+//                 button.classList.add('even-js');
+
+//             }
+//             else{
+//                 button.classList.remove('even-js');
+//                 button.classList.add('odd-js');
+//             }
+//             button.innerText = (num);
+//         }
+
+        console.log('Qustion 3'); //question 3 Part 2
+        
+        let num = localStorage.getItem(('num') || 0) ;
+        function onpressed(){
+            num++;
+            localStorage.setItem('num',num); // string convert into string also for local storage
+            updateButton();
+        }
+        function updateButton(){
+            let button = document.querySelector('#display-button'); 
+            if(num%2==0){
+                button.classList.remove('odd-js');
+                button.classList.add('even-js');
+
+            }
+            else{
+                button.classList.remove('even-js');
+                button.classList.add('odd-js');
+            }
+            button.innerText = (num);
+        }
+        updateButton();
+        
+
+    </script>
+</body>
+</html>

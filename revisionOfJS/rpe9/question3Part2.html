@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=\, initial-scale=1.0">
+    <title>qustion3Part2</title>
+    <style>
+        #display-button{
+            height: 50px;
+            width: 50px;
+            font-size: 30px;
+            border-radius: 10px;
+        }
+        .odd-js{
+            background-color: red;
+        }
+        .even-js{
+            background-color: lightgreen;
+        }
+    </style>
+</head>
+
+<body>
+    <button id="display-button"  onclick=" countfn();">0</button>
+    <script>
+        let count = 0;
+        function countfn (){
+            let button = document.querySelector('#display-button');
+            count++;
+            if(count%2==0){
+                button.classList.remove('odd-js');
+                button.classList.add('even-js');
+            }
+            else{
+                button.classList.add('odd-js');
+                button.classList.remove('even-js');  
+            }
+            button.innerText = count;
+        }
+        
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js</title>
+</head>
+<body>
+    <script>
+        let name = prompt("Enter name"); //key
+        let course = prompt("Enter course"); //value
+        localStorage.setItem(name,course);
+
+        console.log(`name :  ${name}  ,  ${localStorage.getItem(course)}`);
+    </script>
+</body>
+</html>

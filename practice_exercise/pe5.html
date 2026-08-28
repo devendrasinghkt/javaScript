@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>practiceExercise5</title>
+</head>
+<body>
+    <!-- Questions of Practice set of 5;
+        1. Save your name in a variable inside script tag   
+        2. Display name from the variable on the page
+        3. Calculate the cost of Myntra Bag and keep it in avariable
+        4. Show it to console
+        5. Keep GST percentage as constant
+        6. Use eval method from math to convert string calculation into result
+    
+    
+    -->
+    <h1>Using script tag save name</h1>
+    <p id="display_name"></p>
+    <p id="displayBagPrice"></p>
+    <script>
+       // Question 1 & 2 //
+        const name = 'Devendra Singh'
+        document.querySelector('#display_name').innerText=(`my name is ${name} . `);
+      
+        //Question 3,  4, 5, //
+        const gst = 18/100;
+        let bagPrice = (40000-((40000*65/100)*gst));
+        document.querySelector('#displayBagPrice').innerText=bagPrice;
+        console.log(bagPrice);  //it is display only console.  //
+        
+        //Question 6
+        console.log(eval('45+90'));   //it is display only console.  //
+        
+        
+
+    </script>
+</body>
+</html>

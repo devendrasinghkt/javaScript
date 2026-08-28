@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>scope</title>
+</head>
+<body>
+    <script>
+        let age = 13;
+        let usermsg;            //global scope
+        if(age>18){  
+            let secmsg    // local scope - (block scope)
+            usermsg = 'you can drive ';
+        }
+        else {
+            usermsg = 'use a bycycle ';
+        }
+        console.log(usermsg);
+    </script>
+</body>
+</html>

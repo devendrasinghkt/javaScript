@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>calculator</title>
+    <style>
+        #calculator{
+            border: 1px solid black;
+            border-radius: 5px;
+            width: 200px; 
+        }
+        #display{
+            margin: 10px;
+            width: 85%;
+            font-size: 25px; 
+        } 
+        .button-container{
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;  /*Jump to next line after line space finish  */
+        }
+        .button{
+            width: 45px;
+            height: 45px;
+            margin: 3px;
+            font-weight: bolder;
+        }
+        /* .button:hover{
+            background-color: rgb(143, 148, 203);
+            
+        } */
+        .button:active{
+            border: 3px solid red;
+        }
+    </style>
+</head>
+<body>
+    <div id="calculator">
+        <input id="display" type="text"  readonly>
+        <div class="button-container">
+            <button class="button" onclick="currententDisplay=''; 
+            document.querySelector('#display').value=currententDisplay;">C</button>
+
+            <button class="button" onclick="currententDisplay=currententDisplay+'1'; 
+            document.querySelector('#display').value=currententDisplay;">1</button>
+
+            <button class="button" onclick="currententDisplay=currententDisplay+'2'; 
+            document.querySelector('#display').value=currententDisplay;">2</button>
+
+            <button class="button" onclick="currententDisplay=currententDisplay+'+'; 
+            document.querySelector('#display').value=currententDisplay;">+</button>
+
+            <button class="button" onclick="currententDisplay=currententDisplay+'3'; 
+            document.querySelector('#display').value=currententDisplay;">3</button>
+
+            <button class="button" onclick="currententDisplay=currententDisplay+'4'; 
+            document.querySelector('#display').value=currententDisplay;">4</button>
+
+            <button class="button" onclick="currententDisplay=currententDisplay+'-'; 
+            document.querySelector('#display').value=currententDisplay;">-</button>
+
+            <button class="button"onclick="currententDisplay=currententDisplay+'5'; 
+            document.querySelector('#display').value=currententDisplay;">5</button>
+
+            <button class="button" onclick="currententDisplay=currententDisplay+'6'; 
+            document.querySelector('#display').value=currententDisplay;">6</button>
+
+            <button class="button" onclick="currententDisplay=currententDisplay+'*'; 
+            document.querySelector('#display').value=currententDisplay;">*</button>
+
+            <button class="button" onclick="currententDisplay=currententDisplay+'7'; 
+            document.querySelector('#display').value=currententDisplay;">7</button>
+
+            <button class="button" onclick="currententDisplay=currententDisplay+'8'; 
+            document.querySelector('#display').value=currententDisplay;">8</button>
+
+            <button class="button" onclick="currententDisplay=currententDisplay+'/'; 
+            document.querySelector('#display').value=currententDisplay;">/</button>
+
+            <button class="button" onclick="
+            let result = eval(currententDisplay);
+            currententDisplay = result;
+            document.querySelector('#display').value=currententDisplay;">=</button>
+
+            <button class="button" onclick="currententDisplay=currententDisplay+'9'; 
+            document.querySelector('#display').value=currententDisplay;">9</button>
+
+            <button class="button" onclick="currententDisplay=currententDisplay+'.'; 
+            document.querySelector('#display').value=currententDisplay;">.</button>
+
+            <button class="button" onclick="currententDisplay=currententDisplay+'0'; 
+            document.querySelector('#display').value=currententDisplay;">0</button>
+
+        </div>
+    </div>
+    <script>
+        let currententDisplay = '';
+        document.querySelector('#display').value=currententDisplay; ////value is used for specially input tag eg:- value = currentDisplay;
+    </script>
+</body>
+</html> 

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        
+        //question 1
+        let product = {
+            name: 'pant',
+            variety : 'jeans',
+            style : 'modern',
+            'delivery-time' : 'same day delivery',
+            color : {
+                color1 : 'red',
+                color2 : 'white',
+            },
+            price : '2000',
+            
+            size : 'L',
+            greet: function(){
+                console.log('please visit again ');
+            } 
+        }
+        console.log(product.color.color1);
+        console.log(product.greet());
+
+        //question 2
+        let newProduct = product;
+        console.log(product);
+        newProduct.size = 'M';
+        console.log(product);
+        newProduct.name = 'shirt';
+        console.log(product);
+
+        //question 3
+        console.log(product['delivery-time']);
+
+        //question 4
+        let object = {
+            message : 'Good job',
+            status : 'complete',
+        }
+        console.log(object.message);
+        let {message, status} = object;
+        console.log(message);
+
+        
+        //question 5
+        let obj1 = {
+            name: 'pant',
+            variety : 'jeans',
+            style : 'modern',
+            'delivery-time' : 'same day delivery',
+        }
+        let obj2 = {
+            name: 'shirt',
+            variety : 'jeans',
+            style : 'modern',
+            'delivery-time' : 'next day delivery',
+        }
+        let obj3 = {
+            name: 'shirt',
+            variety : 'jeans',
+            style : 'modern',
+            'delivery-time' : 'next day delivery',
+        }
+
+        function isIdenticalProduct(obj1,obj2){
+            if(typeof obj1 !== 'object' || typeof obj2 !== 'object'){
+                console.log("perimeter is not passed as object");
+                return false;
+            }
+            if(obj1.name===obj2.name &&
+            obj1.style ===obj2.style &&
+            obj1.variety ===obj2.variety &&
+            obj1['delivery-time'] ===obj2['delivery-time']){
+                return true;
+            }
+            else {
+                return false;
+                }
+        };
+        
+            
+        console.log(isIdenticalProduct(obj1,obj2));
+        console.log(isIdenticalProduct(obj1,''));
+        console.log(isIdenticalProduct(obj1,obj3));
+        console.log(isIdenticalProduct(obj2,obj3));
+
+
+    </script>
+</body>
+</html>

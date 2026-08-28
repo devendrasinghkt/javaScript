@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let age = 8;
+        let gender = 'male';
+        let ticket = 100;
+        let finalDiscount;
+
+        if(age <= 5){
+            finalDiscount = ticket-(ticket*(100/100));        // 100% discount
+        }
+        else if(gender === 'female' || age<=8) {
+            finalDiscount = ticket/2;                // 50% discount
+        }
+        // else if(age<=8) {
+        //     finalDiscount = ticket/2;              // 50% discount
+        // }
+        else if(age>=65){
+            finalDiscount = (ticket-ticket*(30/100));               //30% discount
+        }
+        else {
+            finalDiscount = ticket;          //full ticket
+        }
+        console.log(`After final discount you paid amt rupees  ${finalDiscount}.`);
+
+        // let age;
+        // age = 45;
+        // let ticket;
+        // ticket = 100;
+        // let gender = 'female';
+        // // let gender = people, female ,kids;
+        // let kidAge;
+        // kidAge = 5;
+        // let discount;
+        
+        // if(gender=='female'){
+        //    discount = ticket - (ticket*(50/100));
+        // }
+        // else if(gender==kids){
+        //     if(kidAge<5){
+        //         discount = ticket - (ticket*(100/100));
+        //     }
+        //     else if(kidAge > 4 && kidAge<9){
+        //         discount = ticket/2;
+        //     }
+        // }
+        // else if(gender == people){
+        //     if(people > 65){
+        //         discount = ticket - ticket * 30/100;
+        //     }
+        //     else{
+        //         discount = ticket;
+        //     }
+        // }
+        // else {
+        //     discount = `Impropriate msg`;
+        // }
+        // console.log(discount);
+    </script>
+</body>
+</html>
