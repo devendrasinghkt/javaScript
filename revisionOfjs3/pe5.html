@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2 id="name"></h2>
+    <script>
+        //question 1
+        let name = 'Devendra Singh';
+        console.log(name);
+        //question 2
+        document.querySelector('#name').innerText= (name);
+        //question 3
+        let bagPrice = 29540;
+        let offPrice = 24540;
+        //question 4
+        console.log(`Your final bag summary ₹${bagPrice-offPrice}`);
+        //question 5
+        let finalPrice = bagPrice-offPrice;
+        console.log(finalPrice)
+        const gst = finalPrice*18/100;
+        console.log(`your gst in bag already add on ${gst} rupees `);
+        //question 6
+        console.log(eval('23+84'));
+
+
+    </script>
+</body>
+</html>
