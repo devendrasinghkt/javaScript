@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>pe8</title>
+</head>
+<body>
+    
+    <script>
+        let obj = {
+            product : 'pant',
+            style : 'modern',
+            size : 'M',
+            color :{color1: 'blue',
+                    color2 : 'white',
+            },
+            greet : function(){
+                console.log('please visit again ');
+            },
+            'delivery-time': 'Same day delivery'
+
+        }
+        console.log(obj);
+        console.log(obj.color.color1);
+        console.log(obj.greet());
+        console.log(obj['style']);
+
+        //question 2
+        let obj2 = obj;
+        console.log(obj)
+        obj2.product = 'shirt'; //change in product
+        console.log(obj.product); // refrence to also old object.
+        obj2['delivery-time']= 'Next day delivery';
+        console.log(obj['delivery-time']);
+        obj2.color.color1 = 'green';
+        console.log(obj.color.color1);
+        
+        //question 3
+        console.log(obj['delivery-time']);
+        
+        //question 4
+        let obj3 = {
+            message : 'good job',
+            status : 'completed',
+        }
+        console.log(obj.message);
+        let {message,status} = obj3; //destructing is used to show code clean.
+        console.log(message); //eg. of destructing
+
+        //question 5
+        let product = {
+            name: 'pant',
+            variety : 'jeans',
+            style : 'modern',
+            'delivery-time' : 'same day delivery',
+        }
+        let product2 ={
+            name: 'shirt',
+            variety : 'jeans',
+            style : 'modern',
+            'delivery-time' : 'next day delivery',
+        }
+        let product3 = {
+            name: 'shirt',
+            variety : 'jeans',
+            style : 'modern',
+            'delivery-time' : 'next day delivery',
+        }
+        function isIdenticalProduct(product,product2){
+            if(typeof product !== 'object' || typeof product2 !== 'object'){
+                console.log('perimeter is not passed as object');
+                return false;
+            }
+            else if(product.name === product2.name &&
+                product.style === product2.style && 
+                product.variety === product2.variety &&
+                product['delivery-time'] === product2['delivery-time'] ) {
+                
+                return true;
+            }
+            else {
+                return false;
+            }
+        }
+        console.log(isIdenticalProduct(product,product2));
+        console.log(isIdenticalProduct(product,''));
+        console.log(isIdenticalProduct(product,product3));
+        console.log(isIdenticalProduct(product2,product3));
+        
+    </script>
+</body>
+</html>

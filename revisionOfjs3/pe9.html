@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>pe9</title>
+</head>
+<body>
+    <h1 id="greeting"></h1>
+    <h1 id="greetNameDisplay"></h1>
+    <script>
+        //question 1 
+        let date = new Date();
+        let hours = date.getHours();
+        // let hours = 21;
+        console.log(hours);
+        if(hours >= 12 && hours<=17) {document.querySelector('#greeting').innerText = ('good Afternoon');}
+        else if(hours>=18 && hours <=20) {document.querySelector('#greeting').innerText = ('good Evening');}
+        else if(hours>=21 && hours <=23) {document.querySelector('#greeting').innerText = ('good night');}
+        else if(hours>=0 && hours <=11) {document.querySelector('#greeting').innerText = ('good Morning');}
+        else {document.querySelector('#greeting').innerText=('Impropriate msg ');}
+
+        //question 2
+        function greetName(name){
+            if(hours >= 12 && hours<=17){
+                return 'Good Afternoon '+ name;
+            }
+            else if(hours>=18 && hours <=20){
+                return 'Good evening '+ name;
+            }
+            else if(hours>=21 && hours <=23){
+                return 'Good night '+ name;
+            }
+            else if(hours>=0 && hours <=11){
+                return 'Good good morning '+ name;
+            }
+            
+        }
+        let result = (greetName('Devendra Singh'));
+        console.log( result);
+        document.querySelector('#greetNameDisplay').innerText = result;
+        
+    </script>
+</body>
+</html>
