@@ -4,10 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>pe9</title>
+    <style>
+        .even-js{
+            background-color: blue;
+        }
+        .odd-js{
+            background-color: red;
+        }
+    </style>
 </head>
 <body>
     <h1 id="greeting"></h1>
     <h1 id="greetNameDisplay"></h1>
+    <h1><button onclick="onPressed();" id="buttonDisplay">0</button></h1>
     <script>
         //question 1 
         let date = new Date();
@@ -39,7 +48,43 @@
         let result = (greetName('Devendra Singh'));
         console.log( result);
         document.querySelector('#greetNameDisplay').innerText = result;
-        
+
+        // //question 3 
+        // let count = 0;
+        // function onPressed(){
+        //     count++;
+        //     let button = document.querySelector('#buttonDisplay');
+        //     if(count%2==0){
+        //         button.classList.remove('odd-js');
+        //         button.classList.add('even-js')
+        //     }
+        //     else{
+        //         button.classList.add('odd-js');
+        //         button.classList.remove('even-js')
+        //     }
+        //     button.innerText = count;
+        // }
+
+        let count = localStorage.getItem(('count') || 0);
+        function onPressed(){
+            count++;
+            localStorage.setItem('count',count)
+            let button = document.querySelector('#buttonDisplay'); // string convert into string also for local storage
+            updateButton();
+        }
+        function updateButton(){
+            let button = document.querySelector('#buttonDisplay');
+            if(count%2==0){
+                button.classList.remove('odd-js');
+                button.classList.add('even-js')
+            }
+            else{
+                button.classList.add('odd-js');
+                button.classList.remove('even-js')
+            }
+            button.innerText = count;
+        }
+        updateButton(); // without this use all work but refresh proplem show only (not a big deals.)
     </script>
 </body>
 </html>
