@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        // let twoSum = function(num1 , num2){  //anonymous functions
+        //     return num1 + num2;
+        // }
+
+        // let newSum = twoSum;
+        
+        // console.log(twoSum(4,6)); 
+        // console.log(newSum(4,6));
+
+        //function pass
+        let sum = function (num1,num2){
+            return num1 + num2;
+
+        };
+
+        let threeSum = function(num1,num2,num3,sumTwoNo){
+            let sum1 = sumTwoNo(num1,num2);
+            return sumTwoNo (sum1,num3);
+
+        }
+        console.log(threeSum(4,5,6,sum));
+
+        console.log(threeSum);
+
+        console.log(typeof threeSum);  //function
+
+    </script>
+</body>
+</html>

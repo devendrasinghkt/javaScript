@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //old way
+        // let alarm =  function (){
+        //     console.log("subha ho gayi uth gayi ");
+        // };
+        // console.log('3000 is miliseconds')
+        // setTimeout(alarm,3000);
+
+        //new way
+        // let alarm = () => console.log('subha ho gayi uth jao');
+        // setTimeout(alarm,5000);
+        // console.log('alarm set');
+
+
+        // let alarm = () => console.log(`subha ho gayi uth jao ${new Date()}`);
+        // let timerid = setTimeout(alarm,5000);
+        // console.log(`alarm set with timerid ${timerid}`);
+        
+        // clearTimeout(timerid);       // it is used to cancel the timer
+
+        // setInterval(alarm,1000);
+
+
+        let alarm = () => console.log(`subha ho gayi uth gayi ${new Date()}`);
+        let intervalId = setInterval(alarm,1000);
+        setTimeout(() => clearInterval(intervalId),5000);
+
+    </script>
+</body>
+</html>
