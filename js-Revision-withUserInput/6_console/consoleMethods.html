@@ -17,9 +17,27 @@
         console.warn("hello")
         console.info("hello")
 
-        console.time()
+        // console.time()
         console.time("a")
         console.timeEnd("a")
+
+        console.time("for loop")
+        for(let i = 0;i<5;i+i++){
+            console.log(233)
+        }
+        console.timeEnd("for loop")
+
+        console.time("while loop")
+        let r=0
+        while(r<5){
+            console.log(233)
+            r++
+        }
+        console.timeEnd("while loop")
+
+
+
+
         
     </script>
 </body>
