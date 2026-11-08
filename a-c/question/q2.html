@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            
+            height:70px;
+            width: 70px;
+            border:2px solid black;
+            margin-top: 13px;
+            text-align: center;
+            background-color: aquamarine;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">first div</div>
+    <div class="box">Second div</div>
+    <div class="box">Third div</div>
+    <div class="box">forth div</div>
+    <div class="box">fifth div</div>
+    <div class="box">Sixth div</div>
+    <div class="box">Seventh div</div>
+    
+    <script>
+        // let divs = document.querySelectorAll('.box')
+        // // divs[0].innerText = 'div 1' // you also access in console div[0]  to see direct output 
+        // // divs[1].innerText = 'div 2'  // you also access in console div[1]  to see direct output 
+        // // divs[2].innerText = 'div 3'  // you also access in console div[2]  to see direct output 
+
+        // // divs.forEach((Element)=> {
+        // //     cons
+        // // })
+
+        // new way
+
+        // let divs  = document.querySelectorAll('.box')
+        // for(div of divs){
+        //     console.log(div.innerText);
+        // }
+
+        // divs[0].innerText = 'div 1' // you also access in console div[0]  to see direct output 
+        // divs[1].innerText = 'div 2'  // you also access in console div[1]  to see direct output 
+        // divs[2].innerText = 'div 3'
+
+        // refined version
+
+        let divs = document.querySelectorAll('.box')
+        let index = 0;
+        for(div of divs){
+            console.log(`new div ${index}`)
+            index++;
+        }
+        divs[0].innerText = 'new div 1' // you also access in console div[0]  to see direct output 
+        divs[1].innerText = 'new div 2'  // you also access in console div[1]  to see direct output 
+        divs[2].innerText = 'new div 3'
+        divs[2].innerText = 'new div 4'
+        divs[2].innerText = 'new div 5'
+        divs[2].innerText = 'new div 6'
+        divs[2].innerText = 'new div 7'
+</script>
+</body>
+</html>
