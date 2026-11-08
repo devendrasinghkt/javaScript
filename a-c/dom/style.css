@@ -2,3 +2,9 @@ h1{
     color: blue;
     text-decoration: line-through;
 }
+#heading{
+    background-color: aquamarine;
+}
+.heading-class{
+    background-color: lightpink;
+}
