@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #box{
+            height:140px;
+            width: 140px;
+            margin: 50px;
+            border: 2px solid black;
+            background-color: blue;
+        }
+    </style>
+</head>
+<body>
+    <div id="box" name="jsdiv" style="background-color: red;">This is a div</div>
+    <p class="para">This is a simple paragrph</p>
+    <script>
+        //get Attributes
+        let div = document.querySelector('div')
+        console.log(div)  
+        
+       let id =  div.getAttribute("id")
+       console.log(id)
+       let name =  div.getAttribute("name")
+       console.log(name)
+
+       let paragraph= document.querySelector('p')
+       let clas = paragraph.getAttribute('class')
+       console.log(clas)
+
+    //    let para = document.querySelector('p')
+    //    console.log(para.getAttribute('class'))
+
+    //set Attributes
+    console.log(paragraph)
+    paragraph.setAttribute('class','newClass')
+    console.log(paragraph)
+
+    //style
+    div.style.backgroundColor = 'orange'
+    div.style.backgroundColor = 'purple'
+    div.style.fontSize = '25px'
+    
+    div.innerText = 'this new innertext div'
+        
+    </script>
+</body>
+</html>
