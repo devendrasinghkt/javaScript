@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            height: 250px;
+            width: 100px;
+            background-color: dodgerblue;
+            color: white;
+            border: 1px solid black;
+
+        }
+    </style>
+</head>
+<body>
+    <div class="box" name="jsDiv">This is a div
+        <ul>
+            <li>Item1</li>
+            <li>Item2</li>
+            <li>Item3</li>
+        </ul>
+    </div>
+        
+    <script>
+        let newBtn = document.createElement("button")
+        newBtn.innerText = 'click me'
+        console.log(newBtn)
+
+        let div = document.querySelector('div')
+        // div.append(newBtn)  //add element at the end of  node
+
+        //    div.prepend(newBtn)  //add element at the start of the node
+
+        // div.before(newBtn);    // add element before st node node (outside)
+
+        div.after(newBtn); // add after the node (outside)
+
+        div.remove
+
+        let newHeading = document.querySelector('h1')
+        newHeading.innerText = '<i> i am a new heading </i>'
+        
+        let addHead = document.querySelector('body');
+        addHead.prepend(newHeading)
+
+    </script>
+</body>
+</html>
