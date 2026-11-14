@@ -4,7 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dom</title>
-    <link rel="stylesheet" href="style.css">
+    <style>
+    h1{
+        color: blue;
+        text-decoration: line-through;
+    }
+    #heading{
+        background-color: aquamarine;
+    }
+    .heading-class{
+        background-color: lightpink;
+    }
+    </style>
 </head>
 <body>
     <h1 id="heading">DOM Demo by Apna College</h1>
@@ -13,6 +24,21 @@
     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum ipsa libero sit distinctio dignissimos.</p>
     <button class="heading-class">click me!</button>
     <button id="my-id">button</button>
-    <script src="script.js"></script>
+    <script>
+    let heading = document.getElementById("heading")
+    console.dir(heading)
+
+    let headingClass = document.getElementsByClassName("heading-class")
+    console.dir(headingClass)
+    console.log(headingClass)
+
+    let para = document.getElementsByTagName("p")
+    para.innerText = "hello";
+    console.dir(para)
+    console.log(para)
+
+    let firstEl = document.querySelector('#my-id')
+    console.dir(firstEl)
+    </script>
 </body>
 </html>
