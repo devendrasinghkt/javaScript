@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>dom2ques1</title>
+  <style>
+    .para-class{
+      background-color: aquamarine;
+      color: blue;
+    }
+    .newClass{
+      background-color: yellow;
+      font-size: 30px;
+    }
+  </style>
+</head>
+<body>
+  <p class="para-class">I am paragraph</p>
+  <script>
+    //question 1
+    let btn = document.createElement('button')
+    btn.innerText = 'Click me'
+    btn.style.backgroundColor = 'red'
+    btn.style.color = 'white'
+    btn.style.fontSize = '23px'
+    let body = document.querySelector('body')
+    body.prepend(btn)
+
+    //question 2
+    let para = document.querySelector('p')
+    console.log(para.getAttribute('class'))
+    // let newClass = para.setAttribute('class','newClass')
+    let addclass = para.classList.add('newClass')
+
+  </script>
+</body>
+</html>

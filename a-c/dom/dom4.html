@@ -3,49 +3,72 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Dom4</title>
     <style>
-        .box{
-            height: 250px;
-            width: 100px;
+        #box{
+            height: 200px;
+            width: 200px;
             background-color: dodgerblue;
             color: white;
-            border: 1px solid black;
+            border: 2px solid black;
 
         }
     </style>
 </head>
 <body>
-    <div class="box" name="jsDiv">This is a div
-        <ul>
-            <li>Item1</li>
-            <li>Item2</li>
-            <li>Item3</li>
+    <div id="box" name="jsDiv" style="background-color: red;">This is a div
+        <ul>List
+            <li>item1</li>
+            <li>item2</li>
+            <li>item3</li>
         </ul>
     </div>
+    <p id="para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci, excepturi!</p>
+    <Script>
+        // //get attribute
+        // let div = document.querySelector('div');
+        // console.log(div)
+        // let id = div.getAttribute("id");
+        // console.log(id) //it print id attribute name
+        // let name = div.getAttribute("name");
+        // console.log(name) //it print id attribute name
+        // // let para = document.querySelector('p')
+        // // console.log(para) 
+        // let paraId = para.getAttribute('id')
+        // console.log(paraId)
+
+        // //set attribute
+        // // let us change para id 's name
+        // let para = document.querySelector('p')
+        // console.log(para.setAttribute('id','paraid'))
+
+        // let div = document.querySelector('div')
+        // div.style.backgroundColor = 'purple'
+        // div.style.color = 'blue'
+        // div.style.fontSize = '23px'
+        // // div.style.visibility = 'hidden'
+        // div.innerText = 'Hello'
+
+        // let btn = document.createElement('button')
+        // btn.innerText = 'I am button'
+        // console.log(btn)
+        // let div = document.querySelector('div')
+
+        // div.append(btn) //add button botton of div and inside div
+        // div.prepend(btn)    //add button top of div and inside div
+        // div.before(btn) // adds before the node (outside)
+        // div.after(btn)   //adds button after the div (outside)
+
+        let newheading = document.createElement('h1')
+        newheading.innerText  = " i am new heading "
+        document.querySelector('body').prepend(newheading)
+
+        let para = document.querySelector('p')
+        para.remove()
+
         
-    <script>
-        let newBtn = document.createElement("button")
-        newBtn.innerText = 'click me'
-        console.log(newBtn)
-
-        let div = document.querySelector('div')
-        // div.append(newBtn)  //add element at the end of  node
-
-        //  div.prepend(newBtn)  //add element at the start of the node
-
-        // div.before(newBtn);    // add element before st node node (outside)
-
-        // div.after(newBtn); // add after the node (outside)
-
-        // div.remove
-
-        let newHeading = document.querySelector('h1')
-        newHeading.innerText = '<i> i am a new heading </i>'
         
-       let head = document.querySelector('body');
-       head.prepend(newHeading)
 
-    </script>
+    </Script>
 </body>
 </html>
