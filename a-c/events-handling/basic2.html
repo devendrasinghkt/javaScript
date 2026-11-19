@@ -21,21 +21,19 @@
 
   <script>
     let btn1 = document.querySelector('#btn1')
-    btn1.onclick = () => {
-      console.log('handler 1')
-      let a = 24;
-      a++;
-      console.log(a)
-    }
-    btn1.onclick = () => {
-      console.log('handler 2')
-      let a = 24;
-      a++;
-      console.log(a)
+    btn1.onclick = (evt) => {
+      console.log(evt)
+      console.log(evt.type);
+      console.log(evt.target);
+      console.log(evt.clientX, evt.clientY)
+      
     }
     let div = document.querySelector('.box')
-    div.onmouseover = () => {
-      console.log('you are inside div')
+    div.onmouseover = (evt) => {
+      console.log(evt)
+      console.log(evt.type);
+      console.log(evt.target);
+      console.log(evt.clientX, evt.clientY)
     }
   </script>
 </body>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>listeners</title>
+</head>
+<body>
+    <button id="btn1">button 1</button>
+
+    <script>
+      let btn1 = document.querySelector('#btn1')
+      btn1.addEventListener('click',()=>{
+        console.log('btn1 is clicked handler 1 :')
+      })
+      
+      btn1.addEventListener('click',()=>{
+        console.log('btn1 is clicked handler 2 :')
+      })
+      const handler3 = ()=>{
+        console.log('btn1 is clicked handler 3 :')
+      }
+      
+      btn1.addEventListener('click',handler3)
+      
+      btn1.addEventListener('click',()=>{
+        console.log('btn1 is clicked handler 4 :')
+      })
+
+      // if i want remove event listeners i can use this :-
+      btn1.removeEventListener('click',()=>{
+        console.log('btn1 is clicked handler 3 :')    // it is removed but these two are 
+                                                        //different handler 3 and remove handler 3
+                                                        // use variable concept to remove in memory
+      })
+       btn1.removeEventListener('click',handler3)
+    </script>
+</body>
+</html>

@@ -1,0 +1,50 @@
+<html>
+<head>
+  <title>theme</title>
+  <style>
+    .light{
+      background-color: white;
+      color: black;
+    }
+    .dark{
+      background-color:black;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+  <button class="toggle"><img src="light_mode_24dp_000_FILL0_wght400_GRAD0_opsz24.svg" alt=""></button>
+  <script>
+    // let toggle = document.querySelector('.toggle')
+    // let currMode = 'light'
+    // toggle.addEventListener('click',()=>{
+    //   if(currMode == 'light'){
+    //     currMode = 'dark'
+    //     document.querySelector('body').style.backgroundColor = 'black';
+    //   }
+    //   else {
+    //     currMode = 'light'
+    //     document.querySelector('body').style.backgroundColor = 'white';
+    //   }
+    //   console.log(currMode)
+    // })
+
+          // BETTER VESION USING CLASS IN CSS AND CLASS LIST IN JS
+
+    let toggle = document.querySelector('.toggle')
+    let body = document.querySelector('body')
+    let currMode = 'light'
+    toggle.addEventListener('click',()=>{
+      if(currMode == 'light'){
+        currMode = 'dark'
+        body.classList.add('dark')
+      }
+      else {
+        currMode = 'light'
+        body.classList.add('light')
+      }
+      console.log(currMode)
+    })
+  </script>
+</body>
+</html>
